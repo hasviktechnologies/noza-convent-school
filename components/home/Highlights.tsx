@@ -40,6 +40,7 @@ const items = [
       "We celebrate student success in academics, sports, and creative pursuits.",
     image: "/images/reward.png",
   },
+  
   {
     title: "Creative Learning",
     description:
