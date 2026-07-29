@@ -5,7 +5,7 @@ import LeadershipMessages from "@/components/home/LeadershipMessages"
 import CTASection from "@/components/home/CTASection"
 import AboutUs from "@/components/home/AboutUs"
 import FAQs from "@/components/home/FAQs"
-import MomentsSection from "@/components/shared/MomentsSection"
+// import MomentsSection from "@/components/shared/MomentsSection"
 import { HorizontalBox } from "@/components/home/HorizontalBox"
 import Infrastructure from "@/components/home/Infrastructure";
 
@@ -16,7 +16,7 @@ export default function Home() {
       <HorizontalBox />
       <AboutUs />
       <Infrastructure />
-      <MomentsSection />
+      {/* <MomentsSection /> */}
       <Highlights />
       <LeadershipMessages />
       <FAQs />
