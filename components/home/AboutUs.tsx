@@ -6,11 +6,11 @@ import { BiCheckboxChecked, BiBookOpen, BiUserCircle, BiAward } from "react-icon
 
 export default function AboutSection() {
   return (
-    <section className="relative overflow-hidden bg-white pt-0 md:pt-24 pb-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white pt-0 md:pt-24 pb-6 px-4 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         {/* <MainTitle title="About Us" /> */}
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,7 +113,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden bg-slate-950/95 p-8 text-white shadow-2xl shadow-slate-950/20"
+              className="overflow-hidden bg-slate-950/95 py-10 px-8 text-white shadow-2xl shadow-slate-950/20"
             >
               <p className="text-sm uppercase tracking-[0.35em] text-lime-300">
                 Why Choose Us

@@ -1,133 +1,115 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
 import MainTitle from "../MainTitle";
 
 const items = [
   {
     title: "Quality Education",
     description:
-      "Providing strong academic foundations through structured learning and experienced, dedicated teachers guiding every student.",
+      "Providing strong academic foundations through structured learning and dedicated teachers guiding every student.",
     image: "/images/QualityEducation.jpg",
   },
   {
     title: "Experienced Teachers",
     description:
-      "Our skilled teachers guide students with care, personal attention, and mentorship to help them achieve their full potential.",
+      "Our skilled teachers support every child with care, mentorship, and personal attention.",
     image: "/images/teachers.png",
   },
   {
     title: "Holistic Development",
     description:
-      "We support overall student growth through balanced learning in academics, sports, creativity, discipline, and character building.",
+      "Balanced learning across academics, sports, arts, and life skills builds complete confidence.",
     image: "/images/holistic.jpg",
   },
   {
-    title: "Computer Lab",
+    title: "Modern Labs",
     description:
-      "Students gain practical technology skills in our computer lab with access to modern systems and guided learning sessions.",
+      "Hands-on science and computer labs help students explore, experiment, and innovate.",
     image: "/images/computer-lab.jpg",
   },
   {
-    title: "Rakshabandhan",
+    title: "Cultural Life",
     description:
-      "Students celebrate Rakshabandhan together, learning the values of love, respect, tradition, and strong community bonding.",
+      "Festivals and performances foster tradition, teamwork, and joyful experiences.",
     image: "/images/rakshabandhan.png",
   },
   {
-    title: "Rewarding Achievements",
+    title: "Achievement Culture",
     description:
-      "We recognize and celebrate student achievements in academics and activities to inspire confidence and continued success.",
+      "We celebrate student success in academics, sports, and creative pursuits.",
     image: "/images/reward.png",
   },
   {
     title: "Creative Learning",
     description:
-      "Creative activities like art, music, storytelling, and projects help students express ideas and develop innovative thinking.",
+      "Art, music, and storytelling activities nurture imagination and problem solving.",
     image: "/images/creative.jpg",
   },
+  {
+    title: "Safe Environment",
+    description:
+      "A secure campus with caring staff ensures students feel safe and supported.",
+    image: "/images/safe.jpg",
+  },
+  {
+    title: "Community Spirit",
+    description:
+      "We encourage students to contribute to society through service and teamwork.",
+    image: "/images/community.jpg",
+  }
 ];
 
 export default function Highlights() {
   return (
-    <section className="pt-1 pb-12 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-0">
+    <section className="bg-slate-50 py-16 sm:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="text-center mb-12 lg:mb-16"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 mb-8">
-            <MainTitle title="Our Highlights" />
-          </div>
+          <MainTitle title="Our Highlights" />
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+            Noza Convent School blends academic strength with character building, creativity, and community spirit in every student activity.
+          </p>
         </motion.div>
 
-        <div className="border border-gray-200 rounded-2xl p-6 mb-8 text-gray-700 leading-relaxed">
-          <motion.p>
-            At Noza Convent School, we believe in the all-round development of children.
-            So, we provide opportunities that nurture academic excellence,
-            creativity, leadership, sportsmanship, and moral values. Our
-            students are encouraged to explore their talents and participate in
-            various activities that help them grow into confident, responsible,
-            and compassionate individuals.
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          {/* <MainTitle align="center" title="What We Offer" /> */}
-
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{ delay: 2000 }}
-            loop
-            spaceBetween={4}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
-            }}
-          >
-            {items.map((item, i) => (
-              <SwiperSlide key={i}>
-                <div
-                  className={
-                    "overflow-hidden transition duration-300 hover:-translate-y-1 flex flex-col w-full bg-white"
-                  }
-                >
-                  {/* Image */}
-                  <div className="h-64 overflow-hidden shrink-0">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover hover:scale-110 transition duration-500"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 text-center flex flex-col grow">
-                    <h5 className="text-lg sm:text-xl font-semibold text-amber-500 mb-2 leading-snug tracking-tight">
-                      {item.title}
-                    </h5>
-
-                    <p className="text-gray-600 text-sm leading-relaxed grow">
-                      {item.description}
-                    </p>
-                  </div>
+        <motion.div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {items.map((item, index) => (
+            <motion.article
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-2xl"
+            >
+              <div className="relative h-64 overflow-hidden sm:h-72">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-xs uppercase tracking-[0.32em] text-amber-200">Highlight</p>
+                  <h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
+                    {item.title}
+                  </h3>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              </div>
+
+              <div className="p-6 sm:p-7">
+                <p className="text-sm leading-7 text-slate-600">
+                  {item.description}
+                </p>
+              
+              </div>
+            </motion.article>
+          ))}
         </motion.div>
       </div>
     </section>

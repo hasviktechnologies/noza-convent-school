@@ -64,7 +64,7 @@ export default function LeadershipMessages() {
                 {card.role}
               </span>
               <div className="mt-8 flex justify-center">
-                <div className="h-32 w-32 overflow-hidden rounded-full bg-lime-100 ring-1 ring-lime-200">
+                <div className="h-64 w-64 overflow-hidden rounded-full bg-lime-100 ring-1 ring-lime-200">
                   <img
                     src={card.img}
                     alt={card.name}

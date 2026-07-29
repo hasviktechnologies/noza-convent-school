@@ -48,7 +48,7 @@ export default function SchoolVideos() {
         </p>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto grid gap-10 items-start lg:grid-cols-2">
         {/* 🎬 Featured YouTube Video */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -58,7 +58,7 @@ export default function SchoolVideos() {
           className="rounded-2xl overflow-hidden shadow-2xl"
         >
           <iframe
-            className="w-full h-[300px] md:h-[400px]"
+            className="w-full aspect-video min-h-[240px] sm:min-h-[300px]"
             src={`https://www.youtube.com/embed/${activeVideo.videoId}?autoplay=1&mute=1`}
             title={activeVideo.title}
             allow="autoplay; encrypted-media"
@@ -79,14 +79,14 @@ export default function SchoolVideos() {
               key={index}
               whileHover={{ scale: 1.03 }}
               onClick={() => setActiveVideo(video)}
-              className={`flex items-center gap-4 p-3 rounded-xl cursor-pointer transition ${
+              className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-2xl cursor-pointer transition ${
                 activeVideo.videoId === video.videoId
                   ? "bg-yellow-500/10 border border-yellow-400"
                   : "bg-white/5"
               }`}
             >
               {/* Thumbnail (auto from YouTube) */}
-              <div className="relative w-28 h-18 rounded-lg overflow-hidden">
+              <div className="relative w-full sm:w-28 h-44 sm:h-24 rounded-xl overflow-hidden">
                 <img
                   src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
                   alt={video.title}
@@ -100,9 +100,9 @@ export default function SchoolVideos() {
               </div>
 
               {/* Info */}
-              <div>
-                <h3 className="font-semibold">{video.title}</h3>
-                <p className="text-sm text-gray-400">{video.category}</p>
+              <div className="min-w-0">
+                <h3 className="font-semibold text-base sm:text-lg">{video.title}</h3>
+                <p className="mt-1 text-sm text-gray-400">{video.category}</p>
               </div>
             </motion.div>
           ))}

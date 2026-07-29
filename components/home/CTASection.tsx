@@ -6,7 +6,7 @@ import { CONTACT } from "@/config/contact";
 
 export default function VisitSection() {
   return (
-    <section className="relative overflow-hidden py-20 bg-linear-to-br from-amber-600">
+    <section className="relative overflow-hidden py-20 bg-linear-to-br from-amber-600 to-amber-400">
       <div className="absolute inset-0 bg-[url('/images/bg_img1.png')] bg-cover bg-center opacity-5" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -41,7 +41,7 @@ export default function VisitSection() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 href={CONTACT.emailUrl}
-                className="inline-flex h-14 items-center justify-center gap-3 rounded-full border border-lime-500/50 bg-lime-500 text-white px-6 text-lg font-semibold transition hover:border-lime-600 hover:bg-lime-600"
+                className="inline-flex h-14 items-center justify-center gap-3 rounded-full border bg-white border-lime-500/50 text-lime-500 px-6 text-lg font-semibold transition hover:text-lime-700 hover:bg-white/90"
               >
                 <BiEnvelope className="text-xl" />
                 Email Us
@@ -54,11 +54,11 @@ export default function VisitSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden rounded-xl border border-white/20 bg-white/95 p-4 shadow-2xl shadow-slate-950/10"
+            className="overflow-hidden rounded-lg border border-white/20 bg-white/95 p-1 shadow-2xl shadow-slate-950/10"
           >
-            <div className="rounded-xl">
+            <div className="rounded-lg">
               <iframe
-                className="h-100 w-full"
+                className="rounded-lg h-100 w-full"
                 src={CONTACT.mapEmbedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

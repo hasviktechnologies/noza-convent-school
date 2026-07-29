@@ -30,7 +30,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden pt-20 pb-28 sm:pb-32 md:pb-36 min-h-150 sm:min-h-162.5 md:min-h-175 lg:min-h-160 flex items-center">
+    <section className="relative w-full overflow-hidden pt-16 pb-24 sm:pt-20 sm:pb-28 md:pb-32 lg:pb-36 min-h-[520px] sm:min-h-[620px] md:min-h-[700px] flex items-center">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {slides.map((slide, i) => (

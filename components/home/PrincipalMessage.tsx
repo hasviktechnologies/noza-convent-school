@@ -60,7 +60,7 @@ export default function PrincipalMessage() {
               <img
                 src="/images/principal.png"
                 alt="School Principal"
-                className="h-full min-h-[420px] w-full object-cover"
+                className="w-full h-full min-h-[280px] max-h-[520px] object-cover rounded-[1.5rem]"
               />
             </div>
           </div>

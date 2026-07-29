@@ -76,8 +76,8 @@ export default function ModernPhotoGallery() {
       <div className="
         max-w-7xl mx-auto 
         grid 
-        grid-cols-2 sm:grid-cols-3 md:grid-cols-4 
-        auto-rows-[120px] sm:auto-rows-[140px] md:auto-rows-[160px]
+        grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+        auto-rows-[140px] sm:auto-rows-[160px] md:auto-rows-[180px] lg:auto-rows-[200px]
         gap-1
       ">
         
@@ -101,7 +101,7 @@ export default function ModernPhotoGallery() {
               src={`/images/gallery/${item.src}`}
               alt=""
               loading="lazy"
-              className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+              className="w-full h-full min-h-full object-cover transition duration-500 group-hover:scale-110"
             />
 
             {/* Premium Overlay */}

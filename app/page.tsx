@@ -5,9 +5,9 @@ import LeadershipMessages from "@/components/home/LeadershipMessages"
 import CTASection from "@/components/home/CTASection"
 import AboutUs from "@/components/home/AboutUs"
 import FAQs from "@/components/home/FAQs"
-import Olympiad from "@/components/home/Olympiad"
 import MomentsSection from "@/components/shared/MomentsSection"
 import { HorizontalBox } from "@/components/home/HorizontalBox"
+import Infrastructure from "@/components/home/Infrastructure";
 
 export default function Home() {
   return (
@@ -15,9 +15,9 @@ export default function Home() {
       <Hero />
       <HorizontalBox />
       <AboutUs />
-      {/* <Olympiad />
+      <Infrastructure />
+      <MomentsSection />
       <Highlights />
-      <MomentsSection /> */}
       <LeadershipMessages />
       <FAQs />
       <CTASection />
