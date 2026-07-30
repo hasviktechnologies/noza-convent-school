@@ -27,7 +27,7 @@ export default function MissionSection() {
       {/* Background Glow */}
       <div className="absolute left-0 top-0 w-125 h-[500px]rounded-full"></div>
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         {/* LEFT SIDE — MISSION */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -39,7 +39,7 @@ export default function MissionSection() {
             Our Mission
           </p>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight mb-6">
             Shaping Future-Ready Students Through
             <span className="text-amber-500"> Education</span>,{" "}
             <span className="text-amber-500">Values</span> &
@@ -72,7 +72,7 @@ export default function MissionSection() {
                 className="flex items-start gap-6 relative"
               >
                 {/* Dot */}
-                <div className="w-10 h-10 flex items-center justify-center bg-amber-500 text-white shadow-lg z-10">
+                <div className="w-10 h-10 flex items-center justify-center bg-lime-500 text-white shadow-lg z-10">
                   {item.icon}
                 </div>
 

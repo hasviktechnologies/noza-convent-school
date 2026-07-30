@@ -49,7 +49,7 @@ export default function Hero() {
       </div>
 
       {/* Premium Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-lime-200/10 to-lime-300/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-lime-300/10 to-lime-300/30" />
 
       {/* Content */}
       <div className="relative z-20 w-full flex">

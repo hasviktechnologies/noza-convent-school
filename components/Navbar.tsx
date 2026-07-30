@@ -25,7 +25,7 @@ export default function Navbar() {
 
   const navLinks: NavItem[] = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us", disabled: true },
+    { href: "/about", label: "About Us"},
     {
       label: "Academics", disabled: true,
       children: [

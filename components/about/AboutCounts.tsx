@@ -51,52 +51,52 @@ export default function AboutCounts({ shadow = "" }) {
             className={`
               px-6 py-8
               group relative min-h-56 h-full overflow-hidden
-              bg-linear-to-br from-gray-700 via-gray-800 to-gray-900 
+              bg-linear-to-br from-lime-800 to-lime-900 
               rounded-xl shadow-xl hover:shadow-2xl
-              border border-gray-600/50 hover:border-orange-500/50
+              border border-lime-600/50 hover:border-amber-500/50
               transition-all duration-300
               ${shadow}
             `}
           >
             {/* TOP SECTION */}
-            <div className="py-4 flex justify-between items-start">
+            <div className="pb-4 flex justify-between items-start">
               <div>
                 <p className="text-white font-semibold text-lg tracking-wide mb-3">
                   {widget.title}
                 </p>
-                <p className="text-gray-400 text-xs leading-relaxed">
+                <p className="text-gray-100 text-sm leading-relaxed">
                   {widget.description}
                 </p>
               </div>
 
               <Icon
                 className="
-                  text-[#F8B82C]
+                  text-white
                   opacity-100
                   group-hover:opacity-125
                   group-hover:scale-125
                   transition-all duration-300
                   shrink-0 ml-4
                 "
-                size={44}
+                size={40}
               />
             </div>
 
             {/* NUMBER */}
             <div className="absolute bottom-6 left-6">
-              <h1 className="text-5xl sm:text-6xl font-bold text-[#F8B82C] tracking-tight leading-none">
+              <h1 className="text-4xl sm:text-5xl font-semibold text-amber-400 tracking-tight leading-none">
                 <CountUp
                   end={widget.count}
                   duration={2}
                   enableScrollSpy
                   scrollSpyOnce
                 />
-                <span className="text-[#F8B82C] ml-0.5">{widget.suffix}</span>
+                <span className="text-amber-400 ml-0.5">{widget.suffix}</span>
               </h1>
             </div>
 
             {/* BOTTOM LINE */}
-            <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-orange-400 to-orange-600 group-hover:w-full transition-all duration-300" />
+            <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-amber-400 to-amber-600 group-hover:w-full transition-all duration-300" />
           </motion.div>
         );
       })}

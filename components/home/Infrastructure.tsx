@@ -6,13 +6,13 @@ import MainTitle from "../MainTitle";
 
 export default function Infrastructure() {
   return (
-    <section className="relative bg-lime-900">
+    <section className="relative bg-lime-600">
       <div
         className="absolute inset-0 opacity-5"
         style={{ background: "url(/images/bg_img1.png)" }}
       ></div>
       <div className="w-full relative mx-auto">
-        <div className="absolute inset-0 flex items-center justify-center bg-lime-500/30 px-6">
+        <div className="absolute inset-0 flex items-center justify-center bg-lime-600/30 px-6">
           <div className="w-full max-w-7xl text-center">
             <div className="hidden md:block">
               <MainTitle
@@ -26,11 +26,14 @@ export default function Infrastructure() {
               Our campus combines elegant design with modern facilities to
               provide an inspiring, safe and well-equipped environment for every
               student.
+              From state-of-the-art classrooms and laboratories to lush outdoor
+              spaces, we ensure that every aspect of our infrastructure supports
+              holistic learning and growth.
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="bg-white/4  backdrop-blur-lg border border-white/8 rounded-xl p-4 flex items-start gap-5">
-                <div className="w-15 h-15 rounded-md bg-white/10 flex items-center justify-center text-white">
+                <div className="w-15 h-15 rounded-md bg-white/20 flex items-center justify-center text-white">
                   <FaSchool className="text-xl" />
                 </div>
                 <div className="text-start">
@@ -44,7 +47,7 @@ export default function Infrastructure() {
               </div>
 
               <div className="bg-white/4  backdrop-blur-lg border border-white/8 rounded-xl p-4 flex items-start gap-5">
-                <div className="w-15 h-15 rounded-md bg-white/10 flex items-center justify-center text-white">
+                <div className="w-15 h-15 rounded-md bg-white/20 flex items-center justify-center text-white">
                   <FaFlask className="text-xl" />
                 </div>
                 <div className="text-start">
@@ -56,7 +59,7 @@ export default function Infrastructure() {
               </div>
 
               <div className="bg-white/4  backdrop-blur-lg border border-white/8 rounded-xl p-4 flex items-start gap-5">
-                <div className="w-15 h-15 rounded-md bg-white/10 flex items-center justify-center text-white">
+                <div className="w-15 h-15 rounded-md bg-white/20 flex items-center justify-center text-white">
                   <FaLeaf className="text-xl" />
                 </div>
                 <div className="text-start">

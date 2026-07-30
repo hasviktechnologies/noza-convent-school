@@ -14,81 +14,88 @@ import MainTitle from "../MainTitle";
 const values = [
   {
     title: "Integrity",
-    desc: "We nurture honesty, responsibility and strong moral character in every student.",
+    desc: "Honesty, responsibility and moral courage are at the heart of every student action.",
     icon: BiShield,
   },
   {
     title: "Excellence",
-    desc: "We encourage students to strive for their best in academics and personal growth.",
+    desc: "Students are supported to reach their highest potential in academics and character.",
     icon: BiStar,
   },
   {
     title: "Respect",
-    desc: "We foster respect for teachers, parents, peers and the community.",
+    desc: "A culture of kindness, listening, and mutual support is woven into daily school life.",
     icon: BiHeart,
   },
   {
     title: "Discipline",
-    desc: "We develop punctuality, self-control and dedication to learning.",
+    desc: "We instill focus, consistency and the dedication needed for personal growth.",
     icon: BiCheckShield,
   },
   {
     title: "Curiosity",
-    desc: "We inspire students to ask questions and develop a love for learning.",
+    desc: "Exploration, questions and creative thinking are celebrated in every lesson.",
     icon: BiSearch,
   },
   {
     title: "Leadership",
-    desc: "We help students build confidence and become future leaders.",
+    desc: "Students learn to lead with confidence, empathy, and team spirit.",
     icon: BiCrown,
   },
 ];
 
 export default function CoreValues() {
   return (
-    <section
-      className="relative pt-12 pb-20 bg-fixed bg-gray-800"   
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 opacity-5" style={{ background: 'url(/images/bg_img1.png)' }}></div>
+    <section className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-24">
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.16),_transparent_32%),linear-gradient(180deg,_rgba(15,23,42,0.95),_rgba(15,23,42,1))]" />
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="grid gap-12 items-center">
+          <div className="space-y-8 text-center lg:text-left">
+            <MainTitle align="center" title="Our Core Values" color="white" />
+            <p className="max-w-7xl text-sm leading-7 text-slate-300 sm:text-base">
+              Every lesson, activity and relationship at Noza Convent School is shaped by values that empower students to become confident, caring and capable individuals. We nurture integrity, curiosity, respect, discipline, excellence and leadership in every student.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-3xl bg-white/5 border border-white/10 p-5">
+                <p className="text-xs uppercase tracking-[0.35em] text-amber-300">Mission</p>
+                <p className="mt-3 text-slate-300 leading-7">
+                  Build character through curiosity, discipline and a sense of community.
+                </p>
+              </div>
+              <div className="rounded-3xl bg-white/5 border border-white/10 p-5">
+                <p className="text-xs uppercase tracking-[0.35em] text-amber-300">Vision</p>
+                <p className="mt-3 text-slate-300 leading-7">
+                  Inspire learners to lead with empathy and purpose in every environment.
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <MainTitle align="center" title="Our Core Values" color="white" />
-
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 pt-3">
-          {values.map((value, i) => {
-            const Icon = value.icon;
-
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="bg-gray-700 p-10"
-              >
-                <div className="flex flex-col items-start">
-                  {/* Icon */}
-                  <div className="flex items-center justify-center bg-gray-600 text-[#F8B82C] rounded-full p-3 mb-6">
-                    <Icon className="text-2xl md:text-3xl" />
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {values.map((value, index) => {
+              const Icon = value.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.06 }}
+                  viewport={{ once: true }}
+                  className="group rounded-[1.75rem] border border-white/10 bg-slate-900/95 p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.7)] transition hover:-translate-y-1 hover:border-amber-400/30"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/20">
+                    <Icon className="text-2xl" />
                   </div>
-
-                  {/* Content */}
-                  <div>
-                    <h5 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-3 leading-snug tracking-tight">
-                      {value.title}
-                    </h5>
-
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {value.desc}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+                  <h3 className="mt-6 text-lg font-semibold text-white sm:text-xl">
+                    {value.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">
+                    {value.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

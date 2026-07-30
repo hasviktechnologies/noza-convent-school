@@ -31,20 +31,20 @@ export default function AchievementSection() {
   return (
     <section className="relative py-20 overflow-hidden bg-white">
       {/* 🔥 Soft Background Glow */}
-      <div className="absolute -top-20 right-0 w-[400px] h-[400px] bg-orange-100/40 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-amber-100/40 blur-3xl rounded-full"></div>
+      <div className="absolute -top-20 right-0 w-100 h-100 bg-orange-100/40 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 left-0 w-75 h-75 bg-amber-100/40 blur-3xl rounded-full"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
         <MainTitle title="Our Achievements" />
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mt-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
           {/* LEFT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative h-full mb-6"
           >
             <div className="relative overflow-hidden rounded-xl shadow-xl">
               <img
@@ -57,16 +57,16 @@ export default function AchievementSection() {
               <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent"></div>
 
               {/* Floating Badge */}
-              <div className="absolute top-6 left-6 bg-amber-500 backdrop-blur-md px-4 py-2 shadow-lg">
+              <div className="absolute top-6 left-6 bg-lime-600 backdrop-blur-md px-4 py-2 shadow-lg">
                 <p className="text-sm font-semibold text-white">
-                  9+ Years of Excellence
+                  10+ Years of Excellence
                 </p>
               </div>
             </div>
           </motion.div>
 
           {/* RIGHT CONTENT */}
-          <div className="space-y-6">
+          <div className="flex flex-col gap-5 justify-stretch h-full">
             {achievements.map((item, i) => {
               const Icon = item.icon;
 
